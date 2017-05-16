@@ -1,0 +1,92 @@
+/* [itemtype="http://schema.org/CreativeWork"] */
+
+@import "./base";
+@import "./job-event";
+@import "./image-object";
+@import "./local-business";
+
+:root {
+  --creative-work: {
+    @apply --card;
+
+    > [data-prop-row=genre] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-transform: uppercase;
+      font-size: var(--sizeXS);
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=sameAs] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=datePublished] {
+      @apply --padding-base;
+      @apply --margin-small;
+
+      text-align: center;
+      font-size: var(--sizeXS);
+      font-weight: bold;
+    }
+
+    > [data-prop-row=isBasedOn] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-align: center;
+      font-size: var(--sizeMS);
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-align: center;
+      font-size: var(--sizeMS);
+    }
+
+    > [data-prop-row=author] {
+      > [itemprop] {
+        @apply --local-business;
+      }
+    }
+
+    > [data-prop-row=image] {
+      > [itemprop] {
+        @apply --image-object;
+      }
+    }
+
+    > [data-prop-row=keywords] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      > [itemprop] {
+        font-size: var(--sizeXS);
+        opacity: 0.6;
+        text-transform: uppercase;
+      }
+    }
+
+    > [data-prop-row=position] {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      opacity: 0.6;
+      font-size: var(--sizeXS);
+    }
+
+    > [data-prop-row=recordedAt] {
+      > [itemprop] {
+        @apply --job-event;
+      }
+    }
+  }
+}

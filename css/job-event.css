@@ -1,0 +1,58 @@
+/* [itemtype="http://schema.org/Event"] */
+@import "./base";
+@import "./local-business";
+
+:root {
+  --date-wrap-height: var(--line-height-full);
+  --date-width: 100px;
+  --date-translate-y: calc(var(--date-width) / 2);
+  --date-translate-x: calc(var(--date-width) / -2 - var(--line-height-half));
+  --date-letter-spacing: 1.8px;
+
+  --date-block: {
+    width: var(--date-width);
+    position: absolute;
+    left: 0;
+    transform: translateX(var(--date-translate-x)) translateY(var(--date-translate-y)) rotate(90deg);
+    letter-spacing: var(--date-letter-spacing);
+  }
+
+  --job-event: {
+    @apply --margin-base;
+
+    > [data-prop-row=startDate] {
+      @apply --padding-base;
+
+      text-align: center;
+      font-size: var(--sizeXS);
+      font-weight: bold;
+    }
+
+    > [data-prop-row=endDate] {
+      @apply --padding-base;
+
+      text-align: center;
+      font-size: var(--sizeXS);
+      font-weight: bold;
+    }
+
+    > [data-prop-row=name] {
+      @apply --padding-base;
+
+      text-align: center;
+      font-weight: normal;
+      font-size: 1rem;
+      padding-top: 0;
+    }
+
+    > [data-prop-row=url] {
+      display: none;
+    }
+
+    > [data-prop-row=location] {
+      > [itemprop] {
+        @apply --local-business;
+      }
+    }
+  }
+}

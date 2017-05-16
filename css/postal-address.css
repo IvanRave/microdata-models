@@ -1,0 +1,19 @@
+/* [itemtype="http://schema.org/PostalAddress"] */
+
+@import "./base";
+
+:root {
+  --postal-address: {
+    > [data-prop-row=addressCountry] { display: none; }
+
+    > [data-prop-row=addressLocality] {
+      @apply --padding-base;
+
+      > [itemprop]::before {
+        @apply --icon;
+
+        content: '\02609';
+      }
+    }
+  }
+}

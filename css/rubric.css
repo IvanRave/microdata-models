@@ -1,0 +1,30 @@
+/* [itemtype="http://schema.org/Service"] */
+
+@import "./base";
+@import "./offer";
+
+:root {
+  --rubric: {
+    @apply --card;
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-align: center;
+    }
+
+    > [data-prop-row=offers] {
+      > div {
+        > [itemprop=offers] {
+          @apply --offer;
+        }
+      }
+    }
+  }
+}

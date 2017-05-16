@@ -1,0 +1,34 @@
+/* [itemtype="http://schema.org/Person"] */
+
+@import "./base";
+@import "./image-object";
+
+:root {
+  --person: {
+    > [data-prop-row=image] {
+      width: 200px;
+      margin: 0 auto;
+
+      > [itemprop] {
+        @apply --image-object;
+      }
+    }
+
+    > [data-prop-row=familyName] {
+      display: inline-block;
+      font-size: var(--sizeML);
+    }
+
+    > [data-prop-row=givenName] {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: var(--sizeML);
+    }
+
+    > [data-prop-row=additionalName] {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: var(--sizeML);
+    }
+  }
+}

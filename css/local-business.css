@@ -1,0 +1,97 @@
+/* [itemtype="http://schema.org/LocalBusiness"] {} */
+
+@import "./base";
+@import "./image-object";
+@import "./person";
+@import "./postal-address";
+
+:root {
+  --local-business: {
+    > [data-prop-row=name] {
+      text-align: center;
+      font-weight: normal;
+      font-size: 1rem;
+      text-transform: uppercase;
+
+      > [itemprop] {
+        &::before {
+          content: '\ab';
+        }
+
+        &::after {
+          content: '\bb';
+        }
+      }
+    }
+
+    > [data-prop-row=image] {
+      width: var(--img-width);
+      margin: 0 auto;
+
+      > [itemprop] {
+        @apply --image-object;
+      }
+    }
+
+    > [data-prop-row=address] {
+      > [itemprop] {
+        @apply --postal-address;
+      }
+    }
+
+    > [data-prop-row=urlVk] {
+      @apply --padding-base;
+
+      [itemprop]::before {
+        @apply --icon;
+
+        content: 'vk';
+      }
+    }
+
+    > [data-prop-row=urlHh] {
+      @apply --padding-base;
+
+      [itemprop]::before {
+        @apply --icon;
+
+        content: 'hh';
+      }
+    }
+
+    > [data-prop-row=telephone] {
+      @apply --padding-base;
+
+      [itemprop]::before {
+        @apply --icon;
+
+        content: '\02706';
+      }
+    }
+
+    > [data-prop-row=email] {
+      @apply --padding-base;
+
+      [itemprop]::before {
+        @apply --icon;
+
+        content: '\02709';
+      }
+    }
+
+    > [data-prop-row=founder] {
+      text-align: center;
+
+      > [itemprop] {
+        @apply --person;
+      }
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+
+      text-align: center;
+      font-size: var(--sizeMS);
+    }
+  }
+}

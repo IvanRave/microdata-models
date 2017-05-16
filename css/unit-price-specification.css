@@ -1,0 +1,30 @@
+/* http://schema.org/UnitPriceSpecification */
+
+@import "./base";
+
+:root {
+  --price-spacing: 4px;
+
+  --unit-price-specification: {
+    > [data-prop-row=price] {
+      display: inline-block;
+    }
+
+    > [data-prop-row=priceCurrency] {
+      display: inline-block;
+      margin-left: var(--price-spacing);
+    }
+
+    > [data-prop-row=unitCode] {
+      display: inline-block;
+      margin-left: var(--price-spacing);
+    }
+  }
+}
+
+/**
+  &::before {
+    content: "per hour";
+    margin-right: var(--price-spacing);
+  }
+*/

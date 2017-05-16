@@ -1,0 +1,60 @@
+/* [itemtype="http://schema.org/Service"] */
+
+@import "./base";
+@import "./local-business";
+@import "./offer";
+
+:root {
+  --segment: {
+    @apply --card;
+
+    > [data-prop-row=category] {
+      @apply --padding-base;
+
+      > [itemprop] {
+        opacity: 0.6;
+        font-size: var(--sizeXS);
+        line-height: 1.1;
+      }
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-small;
+    }
+
+    > [data-prop-row=areaServed] {
+      @apply --padding-base;
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-align: center;
+    }
+
+    > [data-prop-row=provider] {
+      > [itemprop] {
+        @apply --local-business;
+
+        > [data-prop-row=sameAs] {
+          > label {
+            &::after {
+              content: '/resume';
+            }
+          }
+        }
+      }
+    }
+
+    > [data-prop-row=hasOfferCatalog] {
+      /* itemtype=ItemList */
+      > div {
+        > [itemprop] {
+          @apply --offer;
+        }
+      }
+    }
+  }
+}

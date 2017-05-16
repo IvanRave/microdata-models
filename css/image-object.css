@@ -1,0 +1,16 @@
+/* [itemtype="http://schema.org/ImageObject"] */
+@import "./base";
+
+:root {
+  --image-object: {
+    > [data-prop-row=url] { display: none; }
+    > [data-prop-row=width] { display: none; }
+    > [data-prop-row=height] { display: none; }
+    > [data-prop-row=caption] { display: none; }
+
+    > [data-prop-row=contentUrl] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+  }
+}

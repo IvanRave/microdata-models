@@ -1,0 +1,47 @@
+/* [itemtype="http://schema.org/Offer"] {} */
+
+@import "./base";
+@import "./service";
+@import "./unit-price-specification";
+
+:root {
+  --offer: {
+    @apply --card;
+
+    > [data-prop-row=priceSpecification] {
+      @apply --padding-base;
+      @apply --margin-large;
+
+      > [itemprop] {
+        @apply --unit-price-specification;
+
+        display: block;
+        text-align: center;
+      }
+    }
+
+    > [data-prop-row=priceValidUntil] {
+      display: none;
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+    }
+
+    > [data-prop-row=eligibleRegion] {
+      display: none;
+    }
+
+    > [data-prop-row=itemOffered] {
+      > [itemprop] {
+        @apply --service;
+      }
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+
+      text-align: center;
+    }
+  }
+}

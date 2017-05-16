@@ -1,2 +1,3 @@
 # microdata-models
-Example models
+
+An example of microdata models/schemas
