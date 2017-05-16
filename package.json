@@ -1,0 +1,22 @@
+{
+  "name": "microdata-models",
+  "version": "0.1.0",
+  "description": "Examples of microdata models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanRave/microdata-models.git"
+  },
+  "keywords": [
+    "microdata"
+  ],
+  "author": "Ivan Reyvart",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/IvanRave/microdata-models/issues"
+  },
+  "homepage": "https://github.com/IvanRave/microdata-models#readme"
+}
