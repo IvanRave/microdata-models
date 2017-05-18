@@ -41,21 +41,16 @@ module.exports = {
       imgNew.appendChild(fallback);
     }
   },
-  convertToLink: function(doc, elemId, elemOptions) {
-    // Grab the original element
-    const elemOriginal = doc.getElementById(elemId);
-
-    if (!elemOriginal) {
-      throw new Error('required_elem: ' + elemId);
-    }
-
-    const elemTransformed = replaceTagName(doc, elemOriginal, 'a');
-
-    Object.keys(elemOptions).forEach(function(key) {
-      elemTransformed[key] = elemOptions[key];
-    });
-  },
   // https://www.ampproject.org/docs/tutorials/create/basic_markup
   COMMON_STYLE: '<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>',
-  COMMON_SCRIPT: '<script async src="https://cdn.ampproject.org/v0.js"></script>'
+  COMMON_SCRIPT: '<script async src="https://cdn.ampproject.org/v0.js"></script>',
+  ANALYTICS_SCRIPT: '<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>',
+  /**
+   * https://www.ampproject.org/docs/reference/components/amp-analytics
+   * https://yandex.com/support/metrica/code/install-counter-amp.xml
+   * ua UA-xxxxxx-x
+   */
+  buildAnalyticsElement: function(vendor, config) {
+    return `<amp-analytics type="${vendor}"><script type="application/json">${JSON.stringify(config)}</script></amp-analytics>`
+  }
 };
