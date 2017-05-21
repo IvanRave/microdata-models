@@ -70,8 +70,8 @@ module.exports = {
   // writing scripts, instruments, technologies etc.
   // For materials - use a property "material"
   isBasedOn: {
-    type: 'Item',
-    label: 'Is based on',
+    type: 'ItemList',
+    label: 'IsBasedOn',
     ref: WorkResource,
     schema: 'CreativeWork',
     isHashMap: true
