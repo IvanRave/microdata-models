@@ -4,6 +4,7 @@
 const JobEvent = require('./job-event');
 const ImageObject = require('./image-object');
 const LocalBusiness = require('./local-business');
+const WorkResource = require('./work-resource');
 
 module.exports = {
   headline: {
@@ -65,12 +66,15 @@ module.exports = {
     schema: 'HealthAndBeautyBusiness'
   },
 
-  // A resource that was used in the creation of this resource
-  // ServiceOutput -> [CreativeWork]
-  // Usually author = service
+  // A resource that was used in the creation of this resource:
+  // writing scripts, instruments, technologies etc.
+  // For materials - use a property "material"
   isBasedOn: {
-    type: 'URL',
-    label: 'Is based on'
+    type: 'Item',
+    label: 'Is based on',
+    ref: WorkResource,
+    schema: 'CreativeWork',
+    isHashMap: true
   },
 
   recordedAt: {
