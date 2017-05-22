@@ -36,14 +36,6 @@
       font-weight: bold;
     }
 
-    > [data-prop-row=isBasedOn] {
-      @apply --padding-base;
-      @apply --margin-base;
-
-      text-align: center;
-      font-size: var(--sizeMS);
-    }
-
     > [data-prop-row=url] {
       @apply --padding-base;
       @apply --margin-base;
