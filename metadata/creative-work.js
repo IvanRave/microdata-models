@@ -1,10 +1,15 @@
+/**
+ * Work from portfolio
+ *   attached to a specific organization
+ */
+
 'use strict';
 
 // const LocalBusiness = require('./local-business');
 const JobEvent = require('./job-event');
 const ImageObject = require('./image-object');
 const LocalBusiness = require('./local-business');
-const WorkResource = require('./work-resource');
+const TechArticle = require('./tech-article');
 
 module.exports = {
   headline: {
@@ -69,11 +74,13 @@ module.exports = {
   // A resource that was used in the creation of this resource:
   // writing scripts, instruments, technologies etc.
   // For materials - use a property "material"
+  // Usually technologies, like programs or methodics
+  // Every techonology described by TechArticle entity
   isBasedOn: {
     type: 'ItemList',
     label: 'IsBasedOn',
-    ref: WorkResource,
-    schema: 'CreativeWork',
+    ref: TechArticle,
+    schema: 'TechArticle',
     isHashMap: true
   },
 

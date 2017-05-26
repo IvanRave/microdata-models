@@ -1,7 +1,12 @@
 /**
  * Associative entity between CreativeWork and Resource (Instrument/Technology)
+ * TechArticle
  * Used in CreativeWork.basedOn property
  */
+
+'use strict';
+
+const ArticleParagraph = require('./article-paragraph');
 
 module.exports = {
   // required by https://developers.google.com/search/docs/data-types/articles
@@ -16,9 +21,27 @@ module.exports = {
     label: 'Description'
   },
 
-  text: {
+  // Proficiency needed for this content; expected values: 'Beginner', 'Expert'
+  proficiencyLevel: {
     type: 'Text',
-    label: 'Content'
+    label: 'Proficiency level'
+  },
+
+  // Prerequisites needed to fulfill steps in article
+  // MultiText - Array of text strings
+  dependencies: {
+    type: 'Multitext',
+    label: 'Dependencies'
+  },
+
+  // instead of articleBody
+  // Article separated to parts (description + h2 headers)
+  hasPart: {
+    type: 'ItemList',
+    label: 'Content',
+    schema: 'Article',
+    ref: ArticleParagraph,
+    isHashMap: true
   },
 
   keywords: {

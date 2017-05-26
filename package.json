@@ -4,7 +4,9 @@
   "description": "Examples of microdata models",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js metadata/.",
+    "lint-css": "stylelint css/*.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/IvanRave/microdata-models/issues"
   },
-  "homepage": "https://github.com/IvanRave/microdata-models#readme"
+  "homepage": "https://github.com/IvanRave/microdata-models#readme",
+  "devDependencies": {
+    "eslint": "3.x",
+    "eslint-config-airbnb-base": "10.x",
+    "eslint-plugin-import": "2.x",
+    "stylelint": "7.x",
+    "stylelint-config-standard": "16.x"
+  }
 }
