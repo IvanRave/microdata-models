@@ -2,7 +2,7 @@
  * A part of an article - subheader with content
  * schema: Article
  * Used in CreativeWork.basedOn.hasPart property
- * - no description (only articleBody)
+ * - no description (only text)
  * - no other parts
  */
 
@@ -15,19 +15,21 @@ module.exports = {
     label: 'Name'
   },
 
-  articleBody: {
+  // Yandex required 'description' or 'articleBody'
+  //  If Article, Google requires many other fields
+  // Used 'description' instead 'text' or 'articleBody'
+  description: {
+    type: 'Text',
+    label: 'Description'
+  },
+
+  text: {
     type: 'Multitext',
     label: 'Content'
   },
 
   // Images should be at least 696 pixels wide.
   //  image: // Tech logo
-
-  // required
-
-  // publisher
-  // datePublished
-  // author
 
   // some associated link
   sameAs: {

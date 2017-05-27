@@ -7,6 +7,8 @@
 'use strict';
 
 const ArticleParagraph = require('./article-paragraph');
+const LocalBusiness = require('./local-business');
+const ImageObject = require('./image-object');
 
 module.exports = {
   // required by https://developers.google.com/search/docs/data-types/articles
@@ -19,6 +21,14 @@ module.exports = {
   description: {
     type: 'Text',
     label: 'Description'
+  },
+
+  // Images should be at least 696 pixels wide.
+  image: {
+    type: 'Item',
+    label: 'Image',
+    ref: ImageObject,
+    schema: 'ImageObject'
   },
 
   // Proficiency needed for this content; expected values: 'Beginner', 'Expert'
@@ -34,28 +44,39 @@ module.exports = {
     label: 'Dependencies'
   },
 
-  // instead of articleBody
-  // Article separated to parts (description + h2 headers)
-  hasPart: {
-    type: 'ItemList',
-    label: 'Content',
-    schema: 'Article',
-    ref: ArticleParagraph,
-    isHashMap: true
-  },
-
   keywords: {
     type: 'Text',
     label: 'Keywords'
   },
 
-  // Images should be at least 696 pixels wide.
-  //  image: // Tech logo
+  datePublished: {
+    type: 'Date',
+    label: 'Published'
+  },
 
-  // required
+  dateModified: {
+    type: 'Date',
+    label: 'Modified'
+  },
+
+  // instead of articleBody
+  // Article separated to parts (description + h2 headers)
+  hasPart: {
+    type: 'ItemList',
+    label: 'Content',
+    schema: 'CreativeWork',
+    ref: ArticleParagraph,
+    isHashMap: true
+  },
+
+  author: {
+    type: 'Item',
+    label: 'Author',
+    ref: LocalBusiness,
+    schema: 'LocalBusiness'
+  },
 
   // publisher
-  // datePublished
   // author
 
   sameAs: {

@@ -80,7 +80,7 @@ module.exports = {
     type: 'ItemList',
     label: 'IsBasedOn',
     ref: TechArticle,
-    schema: 'TechArticle',
+    schema: 'CreativeWork', // used for short 'info' models
     isHashMap: true
   },
 
