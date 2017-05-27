@@ -1,0 +1,80 @@
+/* [itemtype="http://schema.org/CreativeWork"] */
+
+@import "./base";
+@import "./image-object";
+@import "./local-business";
+@import "./article-paragraph";
+
+:root {
+  --tech-article: {
+    @apply --card;
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=image] {
+      > [itemprop] {
+        @apply --image-object;
+      }
+    }
+
+    > [data-prop-row=proficiencyLevel] {
+      display: none;
+    }
+
+    > [data-prop-row=dependencies] {
+      display: none;
+    }
+
+    > [data-prop-row=keywords] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      > [itemprop] {
+        font-size: var(--sizeXS);
+        opacity: 0.6;
+        text-transform: uppercase;
+      }
+    }
+
+    > [data-prop-row=datePublished] {
+      @apply --padding-base;
+
+      opacity: 0.7;
+      font-size: var(--sizeXS);
+    }
+
+    > [data-prop-row=dateModified] {
+      display: none;
+    }
+
+    > [data-prop-row=hasPart] {
+      > div {
+        > [itemprop] {
+          @apply --article-paragraph;
+        }
+      }
+    }
+
+    > [data-prop-row=author] {
+      > [itemprop] {
+        @apply --local-business;
+      }
+    }
+
+    > [data-prop-row=sameAs] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=url] {
+      @apply --padding-base;
+      @apply --margin-base;
+
+      text-align: center;
+      font-size: var(--sizeMS);
+    }
+  }
+}

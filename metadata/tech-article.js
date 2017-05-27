@@ -17,6 +17,16 @@ module.exports = {
     label: 'Name'
   },
 
+  datePublished: {
+    type: 'Date',
+    label: 'Published'
+  },
+
+  dateModified: {
+    type: 'Date',
+    label: 'Modified'
+  },
+
   // content summarize in 150 symbols
   description: {
     type: 'Text',
@@ -44,21 +54,6 @@ module.exports = {
     label: 'Dependencies'
   },
 
-  keywords: {
-    type: 'Text',
-    label: 'Keywords'
-  },
-
-  datePublished: {
-    type: 'Date',
-    label: 'Published'
-  },
-
-  dateModified: {
-    type: 'Date',
-    label: 'Modified'
-  },
-
   // instead of articleBody
   // Article separated to parts (description + h2 headers)
   hasPart: {
@@ -67,6 +62,11 @@ module.exports = {
     schema: 'CreativeWork',
     ref: ArticleParagraph,
     isHashMap: true
+  },
+
+  keywords: {
+    type: 'Text',
+    label: 'Keywords'
   },
 
   author: {

@@ -1,0 +1,37 @@
+/* [itemtype="http://schema.org/CreativeWork"] */
+
+@import "./base";
+
+:root {
+  --article-paragraph: {
+    position: relative;
+
+    > [data-prop-row=headline] {
+      font-size: var(--sizeML);
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=text] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=sameAs] {
+      @apply --padding-base;
+      @apply --margin-base;
+    }
+
+    > [data-prop-row=url] {
+      > [itemprop] {
+        @apply --right-link;
+
+        left: 0;
+        opacity: 0.5;
+      }
+    }
+  }
+}

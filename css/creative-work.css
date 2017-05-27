@@ -4,6 +4,7 @@
 @import "./job-event";
 @import "./image-object";
 @import "./local-business";
+@import "./tech-article";
 
 :root {
   --creative-work: {
@@ -47,6 +48,12 @@
     > [data-prop-row=author] {
       > [itemprop] {
         @apply --local-business;
+      }
+    }
+
+    > [data-prop-row=isBasedOn] {
+      > [itemprop] {
+        @apply --tech-article;
       }
     }
 
