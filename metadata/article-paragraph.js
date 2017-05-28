@@ -8,6 +8,8 @@
 
 'use strict';
 
+const SourceCode = require('./source-code');
+
 module.exports = {
   // required by https://developers.google.com/search/docs/data-types/articles
   headline: {
@@ -26,6 +28,13 @@ module.exports = {
   text: {
     type: 'Multitext',
     label: 'Content'
+  },
+
+  exampleOfWork: {
+    type: 'Item',
+    label: 'Example',
+    ref: SourceCode,
+    schema: 'SoftwareSourceCode'
   },
 
   // Images should be at least 696 pixels wide.

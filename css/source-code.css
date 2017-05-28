@@ -1,0 +1,29 @@
+/* [itemtype="http://schema.org/SoftwareSourceCode"] */
+
+@import "./base";
+
+:root {
+  --source-code: {
+    > [data-prop-row=headline] {
+      @apply --margin-small;
+      font-size: 1rem;
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+      @apply --margin-small;
+    }
+
+    > [data-prop-row=text] {
+      @apply --padding-base;
+      @apply --margin-small;
+
+      > [itemprop] {
+        padding: 5px;
+        background-color: #eff0f1;
+        white-space: pre-wrap;
+        color: #393318;
+      }
+    }
+  }
+}
