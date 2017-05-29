@@ -33,11 +33,32 @@
     }
 
     > [data-prop-row=url] {
-      > [itemprop] {
-        @apply --right-link;
+      position: absolute;
+      top: 0;
+      left: 1px;
 
-        left: 0;
+      > [itemprop] {
+        display: block;
+        width: 12px;
+        height: 28px;
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
         opacity: 0.5;
+
+        &::after {
+          content: '\a7';
+          display: block;
+          margin: 0;
+          padding: 0;
+          visibility: visible;
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 1rem;
+        }
       }
     }
   }

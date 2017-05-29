@@ -27,6 +27,7 @@
   --img-width: 200px;
   --button-width: 80px;
   --button-height: 40px;
+  --icon-width: 36px;
 
   /** z-index */
   --z-nav: 1000;
@@ -80,7 +81,7 @@
    * non-clickable links
    */
   --icon: {
-    width: 36px;
+    width: var(--icon-width);
     margin-right: 4px;
     font-size: var(--sizeML);
     vertical-align: middle;
@@ -91,16 +92,26 @@
   }
 
   --right-link: {
-    width: 12px;
+    display: block;
+    width: 20px;
     height: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
     overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 
-    &::before {
+    &::after {
       content: '\bb';
-      font-size: 1.1rem;
+      display: block;
+      margin: 0;
+      padding: 0;
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.4rem;
+      line-height: 0.4;
     }
   }
 
@@ -115,11 +126,11 @@
     position: relative;
 
     &::after {
+      content: '\27A3';
       display: block;
       background: var(--accent-base);
       visibility: visible;
       color: var(--accent-text);
-      content: '\27A3';
       font-size: 1.5rem;
       position: absolute;
       top: 0;
@@ -168,6 +179,10 @@ a {
     color: var(--accent-light);
     opacity: 1;
   }
+}
+
+ul {
+  margin: 0;
 }
 
 span {
