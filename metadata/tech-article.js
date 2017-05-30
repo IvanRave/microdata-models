@@ -33,6 +33,11 @@ module.exports = {
     label: 'Description'
   },
 
+  inLanguage: {
+    type: 'Text', // TODO: to lang
+    label: 'Language'
+  },
+
   // Images should be at least 696 pixels wide.
   image: {
     type: 'Item',
