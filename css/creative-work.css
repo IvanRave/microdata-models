@@ -4,7 +4,8 @@
 @import "./job-event";
 @import "./image-object";
 @import "./local-business";
-@import "./tech-article";
+
+/* @import "./tech-article"; */
 
 :root {
   --creative-work: {
@@ -51,11 +52,13 @@
       }
     }
 
+    /*
     > [data-prop-row=isBasedOn] {
       > [itemprop] {
         @apply --tech-article;
       }
     }
+    */
 
     > [data-prop-row=image] {
       > [itemprop] {
