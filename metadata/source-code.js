@@ -22,13 +22,18 @@ module.exports = {
     label: 'Description'
   },
 
+  programmingLanguage: {
+    type: 'Text',
+    label: 'Programming language'
+  },
+
   text: {
     type: 'Code',
     label: 'Content'
   },
 
-  programmingLanguage: {
-    type: 'Text',
-    label: 'Programming language'
+  sameAs: {
+    type: 'URL',
+    label: 'URL'
   }
 };

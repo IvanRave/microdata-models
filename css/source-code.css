@@ -8,6 +8,7 @@
       @apply --margin-small;
 
       font-size: 1rem;
+      font-weight: bold;
     }
 
     > [data-prop-row=description] {
@@ -15,16 +16,28 @@
       @apply --margin-small;
     }
 
+    > [data-prop-row=programmingLanguage] {
+      @apply --padding-base;
+
+      font-variant: small-caps;
+      opacity: 0.7;
+    }
+
     > [data-prop-row=text] {
       @apply --padding-base;
-      @apply --margin-small;
 
       > [itemprop] {
         padding: 5px;
         background-color: #eff0f1;
         white-space: pre-wrap;
+        word-break: break-word;
         color: #393318;
+        font-size: var(--sizeMS);
       }
+    }
+
+    > [data-prop-row=sameAs] {
+      @apply --padding-base;
     }
   }
 }

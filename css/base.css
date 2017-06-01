@@ -1,6 +1,9 @@
 /** https://gist.github.com/jtribble/a52a774a8c6bd1e1fd73 */
+
+/** https://developers.google.com/speed/docs/insights/UseLegibleFontSizes */
+
 :root {
-  --line-height: 1.3;
+  --line-height: 1.4;
   --font-size: 16px;
   --line-height-full: calc(var(--font-size) * var(--line-height));
   --line-height-half: calc(var(--line-height-full) / 2);
@@ -18,10 +21,10 @@
   --accent-text: #eee;
 
   /** fonts */
-  --sizeXL: 1.6rem; /** Extra large */
-  --sizeML: 1.3rem; /** Medium large */
-  --sizeMS: 0.8rem; /** Medium small */
-  --sizeXS: 0.6rem; /** Extra small */
+  --sizeXL: 24px; /** Extra large */
+  --sizeML: 20px; /** Medium large */
+  --sizeMS: 14px; /** Medium small */
+  --sizeXS: 12px; /** Extra small */
 
   --wrap-width: 640px;
   --img-width: 200px;
@@ -146,7 +149,6 @@ html {
   padding: 0;
   margin: 0;
   line-height: var(--line-height);
-  font-size: var(--line-height-full);
   box-sizing: border-box;
 }
 
