@@ -1,0 +1,32 @@
+/* [itemtype="http://schema.org/Offer"] {} */
+
+@import "./base";
+@import "./offer";
+
+:root {
+  --order: {
+    @apply --card;
+
+    > [data-prop-row=orderDate] {
+      display: none;
+    }
+
+    > [data-prop-row=acceptedOffer] {
+      > [itemprop] {
+        @apply --offer;
+      }
+    }
+
+    > [data-prop-row=description] {
+      @apply --padding-base;
+
+      > [itemprop] {
+        width: 100%;
+      }
+    }
+
+    > [data-prop-row=url] {
+      display: none;
+    }
+  }
+}
