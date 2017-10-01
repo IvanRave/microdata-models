@@ -7,45 +7,31 @@ const City = require('./city');
 // https://schema.org/Service
 module.exports = {
   // serviceType from provider name
-  name: {
-    type: 'Text',
-    label: 'Title'
-  },
+  name: { type: 'Text' },
 
   // Segment name, like http://www.gs1.org/gpc/browser
-  category: {
-    type: 'Text',
-    label: 'Service category' // GPC or Google Product Taxonomy
-  },
+  // GPC or Google Product Taxonomy
+  category: { type: 'Text' },
 
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
   areaServed: {
     type: 'ItemList',
-    label: 'Area served',
     ref: City,
     schema: 'City',
     isHashMap: true
   },
 
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  },
+  url: { type: 'URLID' },
 
   provider: {
     type: 'Item',
-    label: 'Provider',
     schema: 'LocalBusiness',
     ref: LocalBusiness
   },
 
   hasOfferCatalog: {
     type: 'ItemList',
-    label: 'Offer catalog',
     schema: 'Offer',
     ref: Offer,
     isHashMap: false

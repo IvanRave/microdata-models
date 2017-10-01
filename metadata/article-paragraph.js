@@ -12,27 +12,18 @@ const SourceCode = require('./source-code');
 
 module.exports = {
   // required by https://developers.google.com/search/docs/data-types/articles
-  headline: {
-    type: 'Text',
-    label: 'Name'
-  },
+  headline: { type: 'Text' },
 
   // Yandex required 'description' or 'articleBody'
   //  If Article, Google requires many other fields
   // Used 'description' instead 'text' or 'articleBody'
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
-  text: {
-    type: 'Multitext',
-    label: 'Content'
-  },
+  // Content
+  text: { type: 'Multitext' },
 
   exampleOfWork: {
     type: 'Item',
-    label: 'Example',
     ref: SourceCode,
     schema: 'SoftwareSourceCode'
   },
@@ -40,15 +31,9 @@ module.exports = {
   // Images should be at least 696 pixels wide.
   //  image: // Tech logo
 
-  // some associated link
-  sameAs: {
-    type: 'URL',
-    label: 'Link to technology'
-  },
+  // some associated link, e.g. Link to technology
+  sameAs: { type: 'URL' },
 
   // like a main-url + #hash
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  }
+  url: { type: 'URLID' }
 };

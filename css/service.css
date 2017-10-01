@@ -32,14 +32,6 @@
     > [data-prop-row=provider] {
       > [itemprop] {
         @apply --local-business;
-
-        > [data-prop-row=sameAs] {
-          > label {
-            &::after {
-              content: '/resume';
-            }
-          }
-        }
       }
     }
 

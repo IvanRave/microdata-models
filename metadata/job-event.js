@@ -5,32 +5,19 @@ const LocalBusiness = require('./local-business');
 
 // http://schema.org/Event
 module.exports = {
-  startDate: {
-    type: 'Date',
-    label: 'Start'
-  },
+  startDate: { type: 'Date' },
 
-  endDate: {
-    type: 'Date',
-    label: 'End'
-  },
+  endDate: { type: 'Date' },
 
-  // duration
-  name: {
-    type: 'Text',
-    label: 'Position'
-  },
+  // duration, position
+  name: { type: 'Text' },
 
   // it can duplicate the parent project URL
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  },
+  url: { type: 'URLID' },
 
   // Remote or in office
   location: {
     type: 'Item',
-    label: 'Location',
     ref: LocalBusiness,
     schema: 'LocalBusiness' // inheritted from Place
   }

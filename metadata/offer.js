@@ -14,78 +14,47 @@
 const Service = require('./service');
 
 const UnitPriceSpecification = {
-  price: {
-    type: 'Number',
-    label: 'Price value'
-  },
+  price: { type: 'Number' },
 
-  priceCurrency: {
-    // TODO: change to currency: ISO 4217
-    type: 'Text',
-    label: 'Currency'
-  },
+  // TODO: change to specific type: ISO 4217
+  priceCurrency: { type: 'Text' },
 
+  // UN/CEFACT Common Code (3 characters)
   // ANN, MON, WEE, DAY, HUR
-  unitCode: {
-    type: 'Text', // UN/CEFACT Common Code (3 characters)
-    label: 'Unit'
-  }
+  unitCode: { type: 'Text' }
 };
 
 module.exports = {
-  name: {
-    type: 'Text',
-    label: 'Title'
-  },
+  name: { type: 'Text' },
 
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
   // service
   itemOffered: {
     type: 'Item',
-    label: 'ItemOffered',
     ref: Service,
     schema: 'Service'
   },
 
   priceSpecification: {
     type: 'Item',
-    label: 'Make an order',
     ref: UnitPriceSpecification,
     schema: 'UnitPriceSpecification'
   },
 
-  priceValidUntil: {
-    type: 'Date',
-    label: 'Price valid until'
-  },
+  priceValidUntil: { type: 'Date' },
 
-  eligibleRegion: {
-    // standard: ISO 3166-1
-    type: 'Text',
-    label: 'Eligible region'
-  },
+  // standard: ISO 3166-1
+  eligibleRegion: { type: 'Text' },
 
-  url: {
-    type: 'URLID',
-    label: 'Offer URL'
-  }
+  // overseedes Service.url (as name and description)
+  url: { type: 'URLID' }
 
   // itemCondition
   // warranty
   // businessFunction: // default: Sell
   // category: {
   //   type: 'Text',
-  //   label: 'A category of the offer' // 'database', 'API', 'mobile'
+  // 'database', 'API', 'mobile'
   // },
-
-  // itemOffered // Product/Service
-
-  // offeredBy // inverse: makesOffer
-
-  // price
-  // priceCurrency
 };

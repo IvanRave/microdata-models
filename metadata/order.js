@@ -17,25 +17,15 @@ const Offer = require('./offer');
 
 module.exports = {
   // the same as for Offer and Product|Service
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  },
+  url: { type: 'URLID' },
 
   acceptedOffer: {
     type: 'Item',
-    label: 'Offer',
     ref: Offer,
     schema: 'Offer'
   },
 
-  orderDate: {
-    type: 'Date',
-    label: 'Order date'
-  },
+  orderDate: { type: 'Date' },
 
-  description: {
-    type: 'Text',
-    label: 'Order description'
-  }
+  description: { type: 'Text' }
 };

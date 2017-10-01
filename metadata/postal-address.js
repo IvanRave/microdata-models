@@ -6,19 +6,14 @@
 */
 
 module.exports = {
-  // TODO: change to country
-  addressCountry: {
-    type: 'Text',
-    label: 'Country'
-  },
+  // TODO: change to specificType: Country
+  // Name of a country
+  addressCountry: { type: 'Text' },
 
-  addressLocality: {
-    type: 'Text',
-    label: 'City'
-  }
+  // Name of a city
+  addressLocality: { type: 'Text' }
 
   // streetAddress: {
-  //   type: 'Text',
-  //   label: 'Street'
+  //   type: 'Text'
   // }
 };

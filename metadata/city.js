@@ -1,11 +1,5 @@
 module.exports = {
-  name: {
-    type: 'Text',
-    label: 'City'
-  },
+  name: { type: 'Text' },
 
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  }
+  url: { type: 'URLID' }
 };

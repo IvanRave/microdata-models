@@ -12,61 +12,35 @@ const LocalBusiness = require('./local-business');
 const TechArticle = require('./tech-article');
 
 module.exports = {
-  headline: {
-    type: 'Text',
-    label: 'Project'
-  },
+  headline: { type: 'Text' },
 
-  genre: {
-    type: 'Text',
-    label: 'Theme'
-  },
+  // Theme
+  genre: { type: 'Text' },
 
   image: {
     type: 'Item',
-    label: 'image',
     ref: ImageObject,
     schema: 'ImageObject'
   },
 
-  datePublished: {
-    type: 'Date',
-    label: 'Published'
-  },
+  datePublished: { type: 'Date' },
 
   // 50 - 150 symbols
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
-  sameAs: {
-    type: 'URL',
-    label: 'Project url'
-  },
+  sameAs: { type: 'URL' },
 
   // Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
-  keywords: {
-    type: 'Text',
-    label: 'Techs'
-  },
+  keywords: { type: 'Text' },
 
   // The position of an item in a series or sequence of items
-  position: {
-    type: 'Integer',
-    label: 'Position'
-  },
+  position: { type: 'Integer' },
 
-  url: {
-    type: 'URLID',
-    // URL identifier
-    label: 'URL'
-  },
+  url: { type: 'URLID' },
 
   // the same as service.provider
   author: {
     type: 'Item',
-    label: 'Author',
     ref: LocalBusiness,
     schema: 'HealthAndBeautyBusiness'
   },
@@ -78,15 +52,14 @@ module.exports = {
   // Every techonology described by TechArticle entity
   isBasedOn: {
     type: 'ItemList',
-    label: 'IsBasedOn',
     ref: TechArticle,
     schema: 'CreativeWork', // used for short 'info' models
     isHashMap: true
   },
 
+  // period
   recordedAt: {
     type: 'Item',
-    label: 'Period',
     ref: JobEvent,
     schema: 'Event'
   }
@@ -95,7 +68,6 @@ module.exports = {
 // The Organization on whose behalf the creator was working
 // sourceOrganization: {
 //   type: 'Item',
-//   label: 'Source organization',
 //   ref: LocalBusiness,
 //   schema: 'LocalBusiness'
 // },

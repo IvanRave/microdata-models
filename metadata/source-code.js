@@ -9,31 +9,16 @@
 
 module.exports = {
   // required by https://developers.google.com/search/docs/data-types/articles
-  headline: {
-    type: 'Text',
-    label: 'Name'
-  },
+  headline: { type: 'Text' },
 
   // Yandex required 'description' or 'articleBody'
   //  If Article, Google requires many other fields
   // Used 'description' instead 'text' or 'articleBody'
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
-  programmingLanguage: {
-    type: 'Text',
-    label: 'Programming language'
-  },
+  programmingLanguage: { type: 'Text' },
 
-  text: {
-    type: 'Code',
-    label: 'Content'
-  },
+  text: { type: 'Code' },
 
-  sameAs: {
-    type: 'URL',
-    label: 'URL'
-  }
+  sameAs: { type: 'URL' }
 };

@@ -21,22 +21,18 @@ const PostalAddress = require('./postal-address');
 module.exports = {
   // company full name
   // name for a Person (individ company): "Service from Person"
-  name: {
-    type: 'Text',
-    label: 'Company'
-  },
+  name: { type: 'Text' },
 
+  // Logo
   image: {
     type: 'Item',
     // http://some-img.jpeg|alt=Welcome|width=200|height=100
-    label: 'Logo',
     ref: ImageObject,
     schema: 'ImageObject'
   },
 
   address: {
     type: 'Item',
-    label: 'Address',
     ref: PostalAddress,
     schema: 'PostalAddress'
   },
@@ -44,69 +40,54 @@ module.exports = {
   // 2-nd priority link
   urlVk: {
     type: 'URL',
-    label: 'VK',
     sameAsProperty: 'sameAs'
   },
 
+  // HeadHunter
   urlHh: {
     type: 'URL',
-    label: 'HeadHunter',
     sameAsProperty: 'sameAs'
   },
 
-  telephone: {
-    type: 'Telephone',
-    label: 'Telephone'
-  },
+  telephone: { type: 'Telephone' },
 
-  email: {
-    type: 'Email',
-    label: 'Email'
-  },
+  email: { type: 'Email' },
 
   // link to official web site
   // usually uses URLID instead URL
   // but organizations have no URL in our website
-  url: {
-    type: 'URL',
-    label: 'URL'
-  },
+  url: { type: 'URL' },
 
   founder: {
     type: 'Item',
-    label: 'Founder',
     ref: Person,
     schema: 'Person'
   }
-
-  // priceRange: {
-  //   type: 'Text',
-  //   // per hour/month/year etc.
-  //   label: 'Price range'
-  // },
-
-  // // inverse: offeredBy
-  // makesOffer: {
-  //   type: 'Item',
-  //   schema: 'Offer',
-  //   label: 'A pointer to products or services offered by the organization'
-  // },
-
-  // owns: {
-  //   type: 'ItemList',
-  //   schema: 'Product', // or OwnershipInfo
-  //   label: 'Products owned by the organization'
-  // }
-
-  // seeks: {
-  //   schema: 'Demand',
-  //   label: 'A pointer to products or services sought by the org (demand)'
-  // }
-
-  // legalName
-
-  // Upcoming or past event associated with this place, organization, or action. Supersedes events.
-  // event: {
-  //   type: '
-  // }
 };
+
+//   // per hour/month/year etc.
+// priceRange: {
+//   type: 'Text',
+// },
+
+// // inverse: offeredBy
+// A pointer to products or services offered by the organization
+// makesOffer: {
+//   type: 'Item',
+//   schema: 'Offer',
+// },
+
+// Products owned by the organization
+// owns: {
+//   type: 'ItemList',
+//   schema: 'Product', // or OwnershipInfo
+// }
+
+// A pointer to products or services sought by the org (demand)
+// seeks: {
+//   schema: 'Demand',
+// }
+
+// legalName
+
+// Upcoming or past event associated with this place, organization, or action. Supersedes events.

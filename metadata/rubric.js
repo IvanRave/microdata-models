@@ -11,24 +11,15 @@ const Offer = require('./offer');
 module.exports = {
   // breadcrumb: BreadcrumbList
 
-  name: {
-    type: 'Text',
-    label: 'Title'
-  },
+  name: { type: 'Text' },
 
-  description: {
-    type: 'Text',
-    label: 'Description'
-  },
+  description: { type: 'Text' },
 
-  url: {
-    type: 'URLID',
-    label: 'URL'
-  },
+  url: { type: 'URLID' },
 
+  // services + offers
   offers: {
     type: 'ItemList',
-    label: 'Services',
     ref: Offer,
     schema: 'Offer',
     isHashMap: true

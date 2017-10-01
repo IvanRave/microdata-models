@@ -6,30 +6,19 @@
 module.exports = {
   // url required for GoogleValidator as a separated property
   // (outside img)
-  url: {
-    type: 'URL',
-    label: 'Image url'
-  },
+  url: { type: 'URL' },
 
-  width: {
-    type: 'Integer',
-    label: 'Image width'
-  },
+  width: { type: 'Integer' },
 
-  height: {
-    type: 'Integer',
-    label: 'Image height'
-  },
+  height: { type: 'Integer' },
 
   caption: {
     type: 'Text',
-    label: 'Image caption',
     sameAsProperty: 'description'
   },
 
   contentUrl: {
     type: 'Image',
-    label: 'Image source',
     computed: ['url', 'width', 'height', 'caption', function(url, width, height, caption) {
       if (!url ||
           !width ||

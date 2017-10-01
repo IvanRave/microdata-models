@@ -1,6 +1,6 @@
 {
   "name": "microdata-models",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Examples of microdata models",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/IvanRave/microdata-models#readme",
   "devDependencies": {
-    "eslint": "3.x",
-    "eslint-config-airbnb-base": "10.x",
-    "eslint-plugin-import": "2.x",
-    "stylelint": "7.x",
-    "stylelint-config-standard": "16.x"
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0"
   }
 }
