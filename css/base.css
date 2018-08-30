@@ -25,7 +25,6 @@
   --sizeML: 20px; /** Medium large */
   --sizeMS: 14px; /** Medium small */
   --sizeXS: 12px; /** Extra small */
-  --wrap-width: 640px;
   --img-width: 200px;
   --button-width: 80px;
   --button-height: 40px;
@@ -53,8 +52,7 @@
 
   --card: {
     position: relative;
-    max-width: var(--wrap-width);
-    margin: 0 auto;
+    width: 100%;
     background-color: var(--primary-light);
     border-bottom: 12px solid var(--primary-base);
     padding: 4px 0;

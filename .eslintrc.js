@@ -46,6 +46,7 @@ module.exports = {
     "prefer-arrow-callback": "off",
     "prefer-rest-params": "off",
     "prefer-spread": "off",
+    "operator-linebreak": ["error", "after"],
     "padded-blocks": "warn",
     "prefer-template": "off",
     "vars-on-top": "off",
